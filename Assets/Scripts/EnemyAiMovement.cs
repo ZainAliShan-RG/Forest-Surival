@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class EnemyAiMovement : MonoBehaviour
@@ -8,10 +9,14 @@ public class EnemyAiMovement : MonoBehaviour
 
     private Transform playerTransform;
     public Vector2 TargetDirection { get; private set; }
-
+    
     private void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        if (!playerTransform)
+        {
+            Debug.LogError("Player object not found!");
+        }
     }
 
     private void FixedUpdate()
@@ -44,4 +49,6 @@ public class EnemyAiMovement : MonoBehaviour
             enemyRigidbody2D.velocity = TargetDirection * speed;
         }
     }
+    
+    
 }

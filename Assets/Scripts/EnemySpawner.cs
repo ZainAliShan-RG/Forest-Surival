@@ -119,6 +119,7 @@ public class EnemySpawner : MonoBehaviour
         
             if (bossClone != null)
             {
+                bossClone.GetComponent<BoundaryScript>().isBoss = true;
                 Vector3 spawnPosition = GetRandomPositionAroundPlayer(playerTransform.position, enemySpawnRadius);
 
                 spawnPosition.z = 0;

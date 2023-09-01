@@ -31,6 +31,9 @@ public class Boss : MonoBehaviour
             {
                 // kill boss and reset
                 Debug.Log("(( Boss is Dying ))");
+                
+                BoundaryScript.Instance.DeactivateBoundary();
+                
                 ReturnToPool();
             }
         }

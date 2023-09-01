@@ -354,6 +354,7 @@ GameObject:
   - component: {fileID: 5179214902691232824}
   - component: {fileID: -4040974786747535799}
   - component: {fileID: 4788545379338386016}
+  - component: {fileID: -1196042620712629368}
   m_Layer: 0
   m_Name: bullEnemy
   m_TagString: 88
@@ -572,6 +573,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heathBarBoss: {fileID: 2153077116975683742}
+--- !u!114 &-1196042620712629368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5373311463294861697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ee44966f5d7f441bc9b0083917d50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boundaryObject: {fileID: 8147678115973547529, guid: ea857b6165a0f344e94d4c3ef1c0dec2, type: 3}
+  isBoss: 1
 --- !u!1 &5373311464084966405
 GameObject:
   m_ObjectHideFlags: 0
