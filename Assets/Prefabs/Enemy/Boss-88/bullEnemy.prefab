@@ -585,7 +585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1ee44966f5d7f441bc9b0083917d50e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boundaryObject: {fileID: 8147678115973547529, guid: ea857b6165a0f344e94d4c3ef1c0dec2, type: 3}
+  boundaryObject: {fileID: 8147678115973547529, guid: 6c4a39601d219f04491d89143697d7da, type: 3}
   isBoss: 1
 --- !u!1 &5373311464084966405
 GameObject:

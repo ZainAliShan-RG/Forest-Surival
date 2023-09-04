@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
-    public float damage = 50f;
+    public float damage = 25f;
     private const float TotalHealthAmount = 200f;
     private float healthAmount = 200f;
     [SerializeField] private BossHealthUI bossHealthUI;
