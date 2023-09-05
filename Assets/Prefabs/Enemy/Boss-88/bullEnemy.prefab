@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e40f8b2ce85a314abe99110b4ffda9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  damage: 25
   bossHealthUI: {fileID: 4788545379338386016}
 --- !u!60 &-4040974786747535799
 PolygonCollider2D:

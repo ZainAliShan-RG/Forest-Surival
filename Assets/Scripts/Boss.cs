@@ -10,9 +10,8 @@ public class Boss : MonoBehaviour
     private float healthAmount = 200f;
     [SerializeField] private BossHealthUI bossHealthUI;
     
-    
     private const string KillerId = "Killer";
-
+    
     // Let's See if boss is triggered with Bullet
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -34,6 +33,9 @@ public class Boss : MonoBehaviour
                 
                 BoundaryScript.Instance.DeactivateBoundary();
                 
+                // We need to show pop over menu here
+                PowerUpsToast.Instance.ShowPowerUpsToast(); // When the boss is dead let's give player this toast
+
                 ReturnToPool();
             }
         }
@@ -44,4 +46,5 @@ public class Boss : MonoBehaviour
         var gameObjectReturn = gameObject;
         EnemyPooler.Instance.ReturnEnemyToPool(gameObjectReturn.tag, gameObjectReturn);
     }
+    
 }

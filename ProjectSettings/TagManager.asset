@@ -9,6 +9,7 @@ TagManager:
   - CollectableChicken
   - 88
   - BossBoundary
+  - Destroyer
   layers:
   - Default
   - TransparentFX

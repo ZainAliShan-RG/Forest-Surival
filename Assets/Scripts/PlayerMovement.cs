@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     
     
     // Speed with which player will move
-    [SerializeField] private float speed = 5f;
+    public float speed = 15f;
     
     // RB of Player
     [SerializeField] private Rigidbody2D playerRb;

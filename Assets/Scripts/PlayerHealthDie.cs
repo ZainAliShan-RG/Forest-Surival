@@ -18,7 +18,7 @@ public class PlayerHealthDie : MonoBehaviour
 
     public float healthAmount = 100f;
 
-    public const float TotalHealthAmount = 100f;
+    public float totalHealthAmount = 100f;
     
     private void OnTriggerEnter2D(Collider2D other) // If my player touches the enemy bird
     {
@@ -27,7 +27,7 @@ public class PlayerHealthDie : MonoBehaviour
             var enemyBirdHit = other.gameObject.GetComponent<EnemyDeath>().damage;
             healthAmount -= enemyBirdHit;
             Debug.Log($"!!! Player Health After Getting Hit: {healthAmount}");
-            EventController.RaiseManageHealthFunction(healthAmount / TotalHealthAmount);
+            EventController.RaiseManageHealthFunction(healthAmount / totalHealthAmount);
             KillPlayerAndResetTimer();
         }
 
@@ -38,7 +38,7 @@ public class PlayerHealthDie : MonoBehaviour
                 healthAmount += chickenCollectableHealth;
                 healthAmount = Mathf.Clamp(healthAmount, 0, 100f);
                 Debug.Log($"!!! Player Health After Picking Chicken: {healthAmount}");
-                EventController.RaiseManageHealthFunction(healthAmount / TotalHealthAmount);
+                EventController.RaiseManageHealthFunction(healthAmount / totalHealthAmount);
                 
                 Destroy(other.gameObject); // Destroy that chicken piece after collecting
             }
@@ -53,7 +53,7 @@ public class PlayerHealthDie : MonoBehaviour
             var bossHit = other.gameObject.GetComponent<Boss>().damage;
             healthAmount -= bossHit;
             Debug.Log($"!!! Player Health After Getting Hit From Boss: {healthAmount}");
-            EventController.RaiseManageHealthFunction(healthAmount / TotalHealthAmount);
+            EventController.RaiseManageHealthFunction(healthAmount / totalHealthAmount);
             KillPlayerAndResetTimer();
         }
         
@@ -69,6 +69,3 @@ public class PlayerHealthDie : MonoBehaviour
         }
     }
 }
-
-// Health is related to enemy, it should be inside player
-// Heath of player should be inside player

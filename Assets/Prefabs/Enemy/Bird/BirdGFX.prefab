@@ -433,4 +433,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chickenCollectablePrefab: {fileID: 5757348508799812844, guid: 8e74009fa87793b42a51f5b760c41be6, type: 3}
   spawnChance: 0.2
-  birdDamage: 20
+  damage: 20

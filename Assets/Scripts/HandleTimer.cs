@@ -28,7 +28,7 @@ public class HandleTimer : MonoBehaviour
             DisplayTime(timeRemaining);
         }
         // Check If One Minute is passed to Stop Other enemies from spawning and To Spawn the Boss!
-        if (Mathf.FloorToInt(timeRemaining) == 5)
+        if (Mathf.FloorToInt(timeRemaining) == 120)
         {
             // Let's Invoke 
             EventController.oneMinutePassed?.Invoke();

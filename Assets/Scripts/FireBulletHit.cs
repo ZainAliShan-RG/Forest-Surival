@@ -12,6 +12,11 @@ public class FireBulletHit : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) // If my FireBullet collides with anything
     {
+        KillBullet();
+    }
+    
+    public void KillBullet()
+    {
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(effect, 1f); // Delayed Destroying Effect
         Destroy(gameObject); // Destroying Bullet
